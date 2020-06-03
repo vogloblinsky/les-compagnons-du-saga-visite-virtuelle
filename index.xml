@@ -36,7 +36,7 @@
 			<cube url="panos/1-poste-navigation.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
-		<hotspot name="logo" type="image" url="skin/logo-mura-avec-fond.png" keep="false" visible="true" enabled="true" handcursor="true" ath="0.0" atv="90.0" edge="center" zoom="false" distorted="false" rx="0.0" ry="0.0" rz="0.0" width="" height="" scale="0.065" rotate="0.0" alpha="1.0" />
+		<hotspot name="logo" type="image" url="skin/logo-mura.png" keep="false" visible="true" enabled="true" handcursor="true" ath="0.0" atv="90.0" edge="center" zoom="false" distorted="true" rx="0.0" ry="0.0" rz="57.0" width="" height="" scale="0.04" rotate="0.0" alpha="0.6" />
 
 	</scene>
 
