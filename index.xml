@@ -50,8 +50,6 @@
 			<cube url="panos/2-quartier-de-vie.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
-		<hotspot name="logo" type="image" url="skin/logo-mura-avec-fond.png" keep="false" visible="true" enabled="true" handcursor="true" ath="0.0" atv="90.0" edge="center" zoom="false" distorted="false" rx="0.0" ry="0.0" rz="0.0" width="" height="" scale="0.065" rotate="0.0" alpha="1.0" />
-
 	</scene>
 
 	<scene name="scene_3-salle-des-machines" title="Salle des machines" onstart="" thumburl="panos/3-salle-des-machines.tiles/thumb.jpg" lat="" lng="" heading="">
@@ -63,8 +61,6 @@
 		<image>
 			<cube url="panos/3-salle-des-machines.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
-
-		<hotspot name="logo" type="image" url="skin/logo-mura-avec-fond.png" keep="false" visible="true" enabled="true" handcursor="true" ath="0.0" atv="90.0" edge="center" zoom="false" distorted="false" rx="0.0" ry="0.0" rz="0.0" width="" height="" scale="0.065" rotate="0.0" alpha="1.0" />
 
 	</scene>
 
@@ -78,8 +74,6 @@
 			<cube url="panos/4-controle-plongee.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
-		<hotspot name="logo" type="image" url="skin/logo-mura-avec-fond.png" keep="false" visible="true" enabled="true" handcursor="true" ath="0.0" atv="90.0" edge="center" zoom="false" distorted="false" rx="0.0" ry="0.0" rz="0.0" width="" height="" scale="0.065" rotate="0.0" alpha="1.0" />
-
 	</scene>
 
 	<scene name="scene_5-caisson-plongeurs" title="Caisson hyperbare" onstart="" thumburl="panos/5-caisson-plongeurs.tiles/thumb.jpg" lat="" lng="" heading="">
@@ -91,8 +85,6 @@
 		<image>
 			<cube url="panos/5-caisson-plongeurs.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
-
-		<hotspot name="logo" type="image" url="skin/logo-mura-avec-fond.png" keep="false" visible="true" enabled="true" handcursor="true" ath="0.0" atv="90.0" edge="center" zoom="false" distorted="false" rx="0.0" ry="0.0" rz="0.0" width="" height="" scale="0.09" rotate="0.0" alpha="1.0" />
 
 	</scene>
 
