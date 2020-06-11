@@ -1,4 +1,4 @@
-﻿<krpano version="1.20.7" title="Visite virtuelle du SAGA">
+﻿<krpano version="1.20.7" title="Visite virtuelle du sous-marin SAGA">
 
 	<include url="skin/vtourskin.xml" />
 
@@ -24,7 +24,10 @@
 		if(startactions !== null, startactions() );
 	</action>
 
-
+	<contextmenu versioninfo="false">
+		<item caption="Photographie - Philippe Mura" separator="true" />
+		<item caption="Multimédia - Vincent Ogloblinsky" onclick="openurl('https://www.vincentogloblinsky.com/multimedia/', _blank);" />
+	</contextmenu>
 
 	<scene name="scene_1-poste-navigation" title="Poste de navigation" onstart="" thumburl="panos/1-poste-navigation.tiles/thumb.jpg" lat="" lng="" heading="">
 

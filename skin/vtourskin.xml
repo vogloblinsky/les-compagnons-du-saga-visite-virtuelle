@@ -40,19 +40,19 @@
 
 	<action name="skin_webvr_onavailable" scope="local">
 		if(webvr.isvrbrowser,
-					<!-- show a special enter VR screen for Gear VR browsers (Oculus Browser or Samsung Internet VR) -->
+																																	<!-- show a special enter VR screen for Gear VR browsers (Oculus Browser or Samsung Internet VR) -->
 			set(layer[webvr_enterbutton], align=center, y=0, padding='10 20', css=calc(skin_settings.design_text_css + ' font-size:20px;text-align:center;'), html=calc((global.title ? '[i]'+global.title+'[/i][br]' : '') + '[span style="font-size:40px"]Enter VR[span]'), 
 			);
 			skin_hideskin(instant);
 		  ,
-					<!-- remove the enter vr button from the webvr.xml -->
+																																	<!-- remove the enter vr button from the webvr.xml -->
 			removelayer(webvr_enterbutton);
 		);
 				
-				<!-- update the skin buttons to add the skin vr button -->
+																																<!-- update the skin buttons to add the skin vr button -->
 		skin_arrange_buttons();
 			
-				<!-- call the original onavailable event from the webvr.xml -->
+																																<!-- call the original onavailable event from the webvr.xml -->
 		webvr_onavailable();
 	</action>
 
@@ -87,13 +87,13 @@
 			if(aspect != lastaspect OR setupcall == true,
 				copy(lastaspect, aspect);
 				if(stagewidth GT stageheight,
-							<!-- landscape orientation - use stereo rendering and a direct/fast gyro sensor mode -->
+																																			<!-- landscape orientation - use stereo rendering and a direct/fast gyro sensor mode -->
 					set(display.stereo, true);
 					set(webvr.mobilevr_sensor_mode, 3);
 					webvr.update();
 					tween(layer[webvr_rotate_to_landscape_request].alpha, 0.0, 0.0);
 				  ,
-							<!-- portrait orientation - use normal rendering and a smoother/slower gyro sensor mode -->
+																																			<!-- portrait orientation - use normal rendering and a smoother/slower gyro sensor mode -->
 					set(display.stereo, false);
 					set(webvr.mobilevr_sensor_mode, 1);
 					webvr.update();
@@ -193,7 +193,8 @@
 	<layer name="skin_layer" keep="true" type="container" align="top" width="get:skin_settings.layout_width" maxwidth="get:skin_settings.layout_maxwidth" height="100%" maskchildren="true" visible="false" bgcapture="false" zorder="1">
 		<layer name="skin_scroll_window" type="container" align="bottom" width="100%" height="100%" x="0" y="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="1">
 			<layer name="skin_scroll_layer" type="container" align="bottom" width="get:skin_settings.controlbar_width" height="100%" x="0" y="200" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow">
-				<layer name="skin_title" type="text" align="lefttop" edge="leftbottom" x="4" y="0" zorder="4" enabled="false" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:12px;'" textshadow="get:skin_settings.design_text_shadow" visible="false" onautosized="skin_video_updateseekbarwidth();" />
+				<layer name="skin_title" type="text" align="lefttop" edge="leftbottom" x="4" y="-20" zorder="4" enabled="false" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:12px;'" textshadow="get:skin_settings.design_text_shadow" visible="false" onautosized="skin_video_updateseekbarwidth();" />
+				<layer name="skin_credits" type="text" align="lefttop" edge="leftbottom" html="© Philippe Mura - Vincent Ogloblinsky" x="4" y="-2" zorder="4" enabled="true" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:12px;'" textshadow="get:skin_settings.design_text_shadow" visible="true" onautosized="skin_video_updateseekbarwidth();"/>
 				<layer name="skin_video_controls" type="container" align="lefttop" edge="leftbottom" width="100%" height="18" visible="false">
 					<layer name="skin_video_seekbar_container" type="container" align="lefttop" width="100%" height="100%" bgcapture="true" ondown="skin_video_ondownseeking();">
 						<layer name="skin_video_seekbar" type="container" bgcolor="0xFFFFFF" bgalpha="0.25" align="center" width="100%" height="2">
@@ -432,16 +433,16 @@
 
 	<action name="skin_lookat" scope="local" args="h, v, fov">
 		if(webvr.isenabled,
-					<!-- adjust the VR prev/next hotspots for the view change -->
+																																	<!-- adjust the VR prev/next hotspots for the view change -->
 			calc(hlookat_offset, h - view.hlookat);
 			add(hotspot[skin_webvr_prev_scene].ath, hlookat_offset);
 			add(hotspot[skin_webvr_next_scene].ath, hlookat_offset);
 		);
 		if(plugin[skin_gyro].isavailable AND plugin[skin_gyro].enabled,
-					<!-- reset the gyro tracking -->
+																																	<!-- reset the gyro tracking -->
 			plugin[skin_gyro].resetsensor(get(h));
 		);
-				<!-- change the view -->
+																																<!-- change the view -->
 		lookat(get(h), get(v), get(fov));
 	</action>
 
@@ -682,16 +683,16 @@
 
 	<action name="skin_showloading" scope="private:SKINLOADINGCHECK" args="state">
 		if(state == true AND global.display.stereo == false,
-					<!-- start loading -->
+																																	<!-- start loading -->
 			set(loadingstate, 1);
 			delayedcall(2.0,
 				if(loadingstate == 1,
-							<!-- after 2.0 seconds still not loaded? => show the loading text -->
+																																			<!-- after 2.0 seconds still not loaded? => show the loading text -->
 					set(global.layer[skin_loadingtext].visible, true);
 				);
 			);
 		  ,
-					<!-- stop loading -->
+																																	<!-- stop loading -->
 			set(loadingstate, 2);
 			set(global.layer[skin_loadingtext].visible, false);
 		);
@@ -806,10 +807,10 @@
 
 
 	<action name="skin_keydown_event">
-		if(keycode == 33, skin_nextscene_loop(-1) );            			<!-- Page Up   - previous scene -->
-		if(keycode == 34, skin_nextscene_loop(+1) );            			<!-- Page Dowm - next scene -->
-		if(keycode == 35, skin_gotoscene(calc(scene.count-1)) );			<!-- End       - last scene -->
-		if(keycode == 36, skin_gotoscene(0) );                  			<!-- Home/Pos1 - first scene -->
+		if(keycode == 33, skin_nextscene_loop(-1) );            																															<!-- Page Up   - previous scene -->
+		if(keycode == 34, skin_nextscene_loop(+1) );            																															<!-- Page Dowm - next scene -->
+		if(keycode == 35, skin_gotoscene(calc(scene.count-1)) );																															<!-- End       - last scene -->
+		if(keycode == 36, skin_gotoscene(0) );                  																															<!-- Home/Pos1 - first scene -->
 	</action>
 
 
