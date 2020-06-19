@@ -29,6 +29,18 @@
 		<item caption="Multimédia - Vincent Ogloblinsky" onclick="openurl('https://www.vincentogloblinsky.com/multimedia/', _blank);" />
 	</contextmenu>
 
+	<scene name="scene_0-entree" title="Entrée" onstart="" thumburl="panos/6-entree.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/6-entree.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/6-entree.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,1792" />
+		</image>
+
+	</scene>
+
 	<scene name="scene_1-poste-navigation" title="Poste de navigation" onstart="" thumburl="panos/1-poste-navigation.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
