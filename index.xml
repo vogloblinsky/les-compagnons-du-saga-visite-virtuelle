@@ -35,6 +35,17 @@
 
 		<preview url="panos/6-entree.tiles/preview.jpg" />
 
+		<hotspot name="zoom" type="image" onclick="set(hotspot[aplat].visible,true);" url="skin/zoom.png" keep="false" visible="true" tooltip="Zoomer" style="skin_tooltips" enabled="true" handcursor="true" ath="0.0" atv="13.0" edge="center" zoom="false" distorted="true" rx="0.0" ry="0.0" rz="0" width="" height="" scale="0.3" rotate="0.0" alpha="1" />
+
+		<hotspot name="aplat" 
+	         url="skin/aplat.png"
+	         ath="0"
+	         atv="0"
+	         scale="1"
+			 visible="false"
+			 onclick="set(hotspot[aplat].visible,false);"
+	         />
+
 		<image>
 			<cube url="panos/6-entree.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,1792" />
 		</image>
